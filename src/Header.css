@@ -1,0 +1,202 @@
+:root {
+    --bg: #EAF4F4;
+    --overlay: #CBF6F6;
+    --dark-overlay: #A4C3B2;
+    --accent: #DCBCBC;
+    --dark: #1C1D21;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark);
+    font-family: "Poppins";
+}
+
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+html {
+    background-color: var(--bg);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.button, .sec-button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid var(--dark);
+}
+
+.button {
+    background-color: var(--accent);
+}
+
+.sec-button {
+    background-color: transparent;
+}
+
+/* HEADER COMPONENT */
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    background-color: var(--dark-overlay);
+    height: 70px;
+    border-radius: 10px;
+    padding: 0px 25px;
+}
+
+.header-title h1 {
+    font-family: "Mochiy Pop One" !important;
+}
+
+.header-searchbar {
+    position: relative;
+    flex: 0.5 0.8 300px;
+}
+
+.search-bar {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+    background-color: rgb(255, 255, 250);
+    margin-left: 20px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.search-btn img {
+    height: 18px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.cart-container {
+    position: relative;
+}
+
+.cart-amount {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: var(--accent);
+    padding: 0px 5px;
+    border-radius: 100%;
+    border: 1px solid black;
+
+}
+
+.cart-button {
+    height: 28px;
+}
+/* HEADER COMPONENT */
+
+/* HERO SECTTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8dvh;
+    z-index: 10;
+    position: relative;
+}
+
+.hero-image {
+    width: 45vw;
+}
+
+.hero-offer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.hero-discount {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: bold;
+}
+
+.hero-info {
+    font-size: 1.2rem;
+    width: clamp(300px, 80%, 65ch);
+    text-align: center;
+}
+
+.hero-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+/* HERO SECTTION */
+
+/* BEST SELLER SECTTION */
+.sellers-bg {
+    width: 100%;
+    margin-top: -50vh;
+    margin-bottom: -10px;
+
+}
+
+.best-seller {
+    background-color: var(--overlay);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* BEST SELLER  SECTTION */
+
+
+/* SMART PHONES */
+@media only screen and (max-width: 600px) {
+    .header-searchbar {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 15dvh;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .sellers-bg {
+        margin-top: -20vh;
+    }
+}
