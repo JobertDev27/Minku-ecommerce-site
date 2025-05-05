@@ -2,7 +2,11 @@ import { Link } from "react-router";
 import searchBtnImg from "../images/search.webp";
 import cartBtnImg from "../images/shopping-cart.webp";
 
-export default function Header() {
+type Props = {
+  amount: number;
+};
+
+export default function Header({ amount }: Props) {
   return (
     <header>
       <div className="header-container">
@@ -24,7 +28,7 @@ export default function Header() {
           <ul className="header-nav">
             <li className="cart-container">
               <Link to={"/Cart"}>
-                <span className="cart-amount">5</span>
+                <span className="cart-amount">{amount}</span>
                 <img className="cart-button" src={cartBtnImg} alt="" />
               </Link>
             </li>
