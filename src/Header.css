@@ -174,14 +174,129 @@ header {
 
 .best-seller {
     background-color: var(--overlay);
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10dvh;
 }
 
+.best-seller-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.408);
+}
+
+.product-thumb {
+    height: 256px;
+}
+
+.item-content {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-overlay);
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.item-name { 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    font-weight: 600;
+}
+
+.add-item-button {
+    position: absolute;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+}
 /* BEST SELLER  SECTTION */
 
+/* FEATURES SECTTION */
+.features {
+    display: flex;
+    background-color: var(--dark);
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.feature-heading {
+    color: var(--bg);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.feature-body {
+    color: var(--bg);
+    max-width: 250px;
+}
+/* FEATURES SECTTION */
+
+/* CONTACT SECTTION */
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    
+}
+
+.contact-left, .contact-right form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+.contact-right form {
+    gap: 20px;
+}
+
+.input-contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-contact button {
+    width: fit-content;
+}
+
+.contact-input {
+    width: 300px;
+}
+/* CONTACT SECTTION */
 
 /* SMART PHONES */
 @media only screen and (max-width: 600px) {
@@ -192,6 +307,16 @@ header {
     .hero {
         padding-top: 15dvh;
         flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact {
+        flex-direction: column;
     }
 }
 
@@ -200,3 +325,13 @@ header {
         margin-top: -20vh;
     }
 }
+
+@media (min-width: 1200px)  {
+    .best-seller {
+        margin-top: -200px;
+    }
+    .sellers-bg {
+        margin-top: -70vh;
+    }
+}
+
