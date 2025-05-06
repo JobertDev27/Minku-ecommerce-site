@@ -180,6 +180,10 @@ header {
     padding-bottom: 10dvh;
 }
 
+.best-seller h2 {
+    margin-bottom: 20px;
+}
+
 .best-seller-container {
     display: flex;
     align-items: center;
@@ -266,6 +270,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 50px 0;
+    position: relative;
     
 }
 
@@ -295,6 +300,20 @@ header {
 
 .contact-input {
     width: 300px;
+    padding: 5px;
+}
+
+.input-message {
+    padding: 5px;
+}
+
+.bg-split {
+    height: 53%;
+    width: 100%;
+    background-color: var(--overlay);
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
 /* CONTACT SECTTION */
 

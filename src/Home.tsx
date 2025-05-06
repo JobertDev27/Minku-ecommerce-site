@@ -92,7 +92,12 @@ export default function Home() {
             <form
               action=""
               className="contact"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert(
+                  "This is a test website if it was real you just submitted a message"
+                );
+              }}
             >
               <div className="input-contact">
                 <label htmlFor="email">Email Address:</label>
@@ -116,6 +121,7 @@ export default function Home() {
               <div className="input-contact">
                 <textarea
                   name="message"
+                  className="input-message"
                   placeholder="Message..."
                   cols={44}
                   rows={10}
@@ -129,6 +135,7 @@ export default function Home() {
               </div>
             </form>
           </div>
+          <div className="bg-split"></div>
         </section>
       </main>
     </>
