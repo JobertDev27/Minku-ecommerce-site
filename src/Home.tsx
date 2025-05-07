@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import heroImg from "./images/bag.webp";
 import sellersBg from "./images/sellersBG.svg";
 import ShopItemBox from "./components/ShopItemBox";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [items, setItems] = useState([]);
@@ -95,7 +96,7 @@ export default function Home() {
               onSubmit={(e) => {
                 e.preventDefault();
                 alert(
-                  "This is a test website if it was real you just submitted a message"
+                  "This is a test website, if it was real you just submitted a message!"
                 );
               }}
             >
@@ -138,6 +139,7 @@ export default function Home() {
           <div className="bg-split"></div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
