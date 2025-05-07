@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import "./Header.css";
+import "./Global.css";
 import Home from "./Home";
 import Store from "./Store";
 import Cart from "./Cart";
