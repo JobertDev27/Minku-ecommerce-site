@@ -115,6 +115,7 @@ header {
 
 .cart-container {
     position: relative;
+    margin-top: 8px;
 }
 
 .cart-amount {
@@ -308,7 +309,7 @@ header {
 }
 
 .contact-input {
-    width: 300px;
+    width: clamp(200px, 200px, 400pxs);
     padding: 5px;
 }
 
@@ -378,7 +379,7 @@ footer {
 }
 
 .footer-contact {
-    padding-left: 50px;
+    padding: 0 50px;
     width: 80%;
 }
 
@@ -428,14 +429,27 @@ footer {
     .contact {
         flex-direction: column;
     }
+
+    .footer-container {
+        flex-direction: column;
+        border: none;
+        gap: 20px;
+    }
+
+    .footer-contact {
+        align-items: center;
+        margin-bottom: 30px;
+    }
 }
 
+/* TABLETS */
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
     .sellers-bg {
         margin-top: -20vh;
     }
 }
 
+/* DESKTOP */
 @media (min-width: 1200px)  {
     .best-seller {
         margin-top: -200px;
