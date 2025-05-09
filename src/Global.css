@@ -21,6 +21,10 @@ html {
     background-color: var(--bg);
 }
 
+.cart-page {
+    background-color: var(--bg);
+}
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -407,6 +411,51 @@ footer {
     color: var(--bg);
 }
 /* FOOTER SECTTION */
+
+/* CART SECTTION */
+.home-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.cart-item-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10px + 2vw);
+    padding: 5vw;
+
+}
+
+.cart-item-container {
+    background-color: var(--overlay);
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    border: 1px black solid;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.219);
+}
+
+.cart-image-container {
+    background-color: white;
+    width: 128px;
+}
+
+.cart-image-container img {
+    width: 100%;
+}
+
+.cart-item-amount {
+    display: flex;
+}
+
+.cart-amount-counter {
+    width: 24px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+}
+/* CART SECTTION */
 
 
 /* SMART PHONES */
