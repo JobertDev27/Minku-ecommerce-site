@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+
 import Header from "./components/Header";
+import ShopItemBox from "./components/ShopItemBox";
+import Footer from "./components/Footer";
+import { handleAddToCart } from "./components/cartData";
 
 import heroImg from "./images/bag.webp";
 import sellersBg from "./images/sellersBG.svg";
-import ShopItemBox from "./components/ShopItemBox";
-import Footer from "./components/Footer";
 
 export default function Home() {
   const [items, setItems] = useState([]);
-  const [cartAmount, setCartAmount] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <Header amount={cartAmount} />
+      <Header amount={0} />
       <main>
         <section className="hero">
           <img
@@ -51,13 +52,13 @@ export default function Home() {
         <section className="best-seller">
           <h2>BEST SELLERS</h2>
           <div className="best-seller-container">
-            {items.map((product, index) => {
+            {items.map((product, index: number) => {
               return (
                 <ShopItemBox
                   product={product}
                   key={index}
                   onclick={() => {
-                    setCartAmount((prev: number) => prev + 1);
+                    handleAddToCart(product);
                   }}
                 />
               );
