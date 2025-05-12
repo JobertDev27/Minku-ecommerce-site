@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
 import { getCartData } from "./components/cartData";
+
 import CartItem from "./components/CartItem";
 
 type CartItem = {
@@ -16,6 +17,7 @@ export default function Cart() {
   useEffect(() => {
     setCartItems(getCartData());
   }, []);
+
   return (
     <main className="cart-page">
       <Link to="/" className="home-link">

@@ -30,6 +30,7 @@ type CartItem = {
     }
   
     localStorage.setItem("cartItems", JSON.stringify(existing));
+    window.dispatchEvent(new Event("cart-updated")); // I know this is taccy but it works
   };
 
   const handleAddToCart = (product : CartItem) => {
@@ -40,5 +41,15 @@ type CartItem = {
       amount: 1
     }, true);
   };
+
+  const cartAmount = () => {
+    const currData = getCartData();
+    let amount : number = 0;
+    currData.forEach(item => {
+      amount += item.amount;
+    });
+    console.log("item added");
+    return amount;
+  }
   
-  export { saveCartData, getCartData, handleAddToCart };
+  export { saveCartData, getCartData, handleAddToCart, cartAmount };

@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <Header amount={0} />
+      <Header />
       <main>
         <section className="hero">
           <img

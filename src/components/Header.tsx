@@ -1,12 +1,19 @@
 import { Link } from "react-router";
 import searchBtnImg from "../images/search.webp";
 import cartBtnImg from "../images/shopping-cart.webp";
+import { useEffect, useState } from "react";
+import { cartAmount } from "./cartData";
 
-type Props = {
-  amount: number;
-};
+export default function Header() {
+  const [amount, setAmount] = useState<number>(cartAmount());
 
-export default function Header({ amount }: Props) {
+  useEffect(() => {
+    const updatedAmount = () => setAmount(cartAmount());
+
+    window.addEventListener("cart-updated", updatedAmount);
+    return () => window.removeEventListener("cart-updated", updatedAmount);
+  }, []);
+
   return (
     <header>
       <div className="header-container">

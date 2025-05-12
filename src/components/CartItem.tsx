@@ -13,14 +13,12 @@ type Props = {
 };
 
 export default function CartItem({ product }: Props) {
-  // Initialize with the exact amount from localStorage
   const [amount, setAmount] = useState(() => {
     const cart = getCartData();
     const existingItem = cart.find((item) => item.title === product.title);
     return existingItem?.amount || 1;
   });
 
-  // Update localStorage only when amount changes through UI interactions
   const updateAmount = (newAmount: number) => {
     if (newAmount < 1) {
       removeItem();
@@ -38,7 +36,7 @@ export default function CartItem({ product }: Props) {
     const currData = getCartData();
     const newData = currData.filter((item) => item.title !== product.title);
     localStorage.setItem("cartItems", JSON.stringify(newData));
-    setAmount(0); // Triggers component unmount
+    setAmount(0);
   };
 
   const addAmount = () => updateAmount(amount + 1);
