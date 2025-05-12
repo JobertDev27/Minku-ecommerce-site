@@ -50,7 +50,7 @@ export default function CartItem({ product }: Props) {
       <div className="cart-content-container">
         <p className="cart-item-name">{product.title}</p>
         <p className="cart-item-price">
-          {Math.round(product.price * amount * 100) / 100}
+          {"$" + Math.round(product.price * amount * 100) / 100}
         </p>
         <div className="cart-item-amount">
           <button onClick={() => subAmount()}>-</button>

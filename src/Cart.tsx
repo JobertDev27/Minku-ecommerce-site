@@ -20,9 +20,11 @@ export default function Cart() {
 
   return (
     <main className="cart-page">
-      <Link to="/" className="home-link">
-        &#60; Return to home
-      </Link>
+      <nav className="home-link-container">
+        <Link to="/" className="home-link">
+          &#60; Return to home
+        </Link>
+      </nav>
       <div className="cart-item-grid">
         {cartItems.map((item, index) => {
           return <CartItem product={item} key={index} />;

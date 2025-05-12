@@ -1,15 +1,17 @@
+import { handleAddToCart } from "./cartData";
+
 type Product = {
   title: string;
   price: number;
   thumbnail: string;
+  amount: number;
 };
 
 type Props = {
   product: Product;
-  onclick: () => void;
 };
 
-export default function ShopItemBox({ product, onclick }: Props) {
+export default function ShopItemBox({ product }: Props) {
   return (
     <div className="item-container">
       <img
@@ -21,8 +23,11 @@ export default function ShopItemBox({ product, onclick }: Props) {
       />
       <div className="item-content">
         <p className="item-name">{product.title}</p>
-        <p className="item-price">{product.price}</p>
-        <button className="add-item-button button" onClick={onclick}>
+        <p className="item-price">{"$" + product.price}</p>
+        <button
+          className="add-item-button button"
+          onClick={() => handleAddToCart(product)}
+        >
           +
         </button>
       </div>

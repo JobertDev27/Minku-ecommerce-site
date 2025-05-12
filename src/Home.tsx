@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import ShopItemBox from "./components/ShopItemBox";
 import Footer from "./components/Footer";
-import { handleAddToCart } from "./components/cartData";
 
 import heroImg from "./images/bag.webp";
 import sellersBg from "./images/sellersBG.svg";
@@ -53,15 +52,7 @@ export default function Home() {
           <h2>BEST SELLERS</h2>
           <div className="best-seller-container">
             {items.map((product, index: number) => {
-              return (
-                <ShopItemBox
-                  product={product}
-                  key={index}
-                  onclick={() => {
-                    handleAddToCart(product);
-                  }}
-                />
-              );
+              return <ShopItemBox product={product} key={index} />;
             })}
           </div>
         </section>
