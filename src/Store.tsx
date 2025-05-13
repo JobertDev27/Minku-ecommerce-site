@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import ShopItemBox from "./components/ShopItemBox";
-
-type Product = {
-  title: string;
-  price: number;
-  thumbnail: string;
-  amount: number;
-};
+import ItemPage from "./ItemPage";
+import { Product } from "./components/types";
 
 export default function Store() {
   const [productByCat, setProductByCat] = useState<Record<string, Product[]>>(
     {}
   );
+  const [renderProduct, setRenderProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     const categories = async () => {
@@ -37,6 +33,9 @@ export default function Store() {
 
   return (
     <>
+      {renderProduct ? (
+        <ItemPage item={renderProduct} setProduct={setRenderProduct} />
+      ) : null}
       <Header />
       <main className="store-main">
         {Object.keys(productByCat).length > 0 ? (
@@ -47,7 +46,11 @@ export default function Store() {
                 <div className="product-list">
                   {products.map((product) => {
                     return (
-                      <ShopItemBox product={product} key={product.title} />
+                      <ShopItemBox
+                        product={product}
+                        setProduct={setRenderProduct}
+                        key={product.title}
+                      />
                     );
                   })}
                 </div>
