@@ -35,7 +35,13 @@ export default function ItemPage({ item, setProduct }: Props) {
     <div className="item-page">
       <div className="item-main-detail">
         <div className="item-image-cont">
-          <img className="item-page-image" src={item.images[0]} alt="" />
+          <img
+            className="item-page-image"
+            src={item.images[0]}
+            alt=""
+            width="360px"
+            height="360px"
+          />
         </div>
         <div>
           <p className="item-page-title">{item.title}</p>

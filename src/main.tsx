@@ -5,6 +5,7 @@ import "./Global.css";
 import Home from "./Home";
 import Store from "./Store";
 import Cart from "./Cart";
+import Search from "./Search";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/Cart",
     element: <Cart />,
+  },
+  {
+    path: "/Search",
+    element: <Search />,
   },
 ]);
 
