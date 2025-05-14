@@ -8,6 +8,7 @@ Minku is a fully responsive e-commerce site where users can browse, search, and 
 
 - HTML, CSS, and TypeScript
 - React
+- React Router
 - Vercel
 - Vite
 - DummyJSON API
