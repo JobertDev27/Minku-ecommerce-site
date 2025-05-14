@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
+import { Product } from "./components/types";
 
 import Header from "./components/Header";
 import ShopItemBox from "./components/ShopItemBox";
 import Footer from "./components/Footer";
+import ItemPage from "./ItemPage";
 
 import heroImg from "./images/bag.webp";
 import sellersBg from "./images/sellersBG.svg";
 
 export default function Home() {
   const [items, setItems] = useState([]);
+  const [renderProduct, setRenderProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -28,6 +31,9 @@ export default function Home() {
   return (
     <>
       <Header />
+      {renderProduct ? (
+        <ItemPage item={renderProduct} setProduct={setRenderProduct} />
+      ) : null}
       <main>
         <section className="hero">
           <img
@@ -52,7 +58,13 @@ export default function Home() {
           <h2>BEST SELLERS</h2>
           <div className="best-seller-container">
             {items.map((product, index: number) => {
-              return <ShopItemBox product={product} key={index} />;
+              return (
+                <ShopItemBox
+                  product={product}
+                  key={index}
+                  setProduct={setRenderProduct}
+                />
+              );
             })}
           </div>
         </section>
