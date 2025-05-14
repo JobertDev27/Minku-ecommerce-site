@@ -40,7 +40,10 @@ export default function Cart() {
           })}
         </div>
       </main>
-      <div className="checkout">
+      <div
+        className="checkout"
+        onClick={() => alert("Delivery is on the way!")}
+      >
         <div>
           <b className="checkout-total">TOTAL: ${setTotal()}</b>
         </div>
