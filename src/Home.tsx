@@ -8,10 +8,13 @@ import ItemPage from "./ItemPage";
 
 import heroImg from "./images/bag.webp";
 import sellersBg from "./images/sellersBG.svg";
+import { useNavigate } from "react-router";
 
 export default function Home() {
   const [items, setItems] = useState([]);
   const [renderProduct, setRenderProduct] = useState<Product | null>(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
@@ -48,7 +51,9 @@ export default function Home() {
               Get our current deals at half the price!
             </p>
             <div className="hero-btn-container">
-              <button className="button">Shop Now</button>
+              <button className="button" onClick={() => navigate("/Store")}>
+                Shop Now
+              </button>
               <button className="sec-button">Learn More</button>
             </div>
           </div>
