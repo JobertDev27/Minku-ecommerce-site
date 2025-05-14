@@ -83,6 +83,10 @@ header {
     padding: 0px 25px;
 }
 
+.header-title {
+    cursor: pointer;
+}
+
 .header-title h1 {
     font-family: "Mochiy Pop One" !important;
 }

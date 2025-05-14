@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import searchBtnImg from "../images/search.webp";
 import cartBtnImg from "../images/shopping-cart.webp";
 import { useEffect, useState } from "react";
@@ -6,6 +6,8 @@ import { cartAmount } from "./cartData";
 
 export default function Header() {
   const [amount, setAmount] = useState<number>(cartAmount());
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updatedAmount = () => setAmount(cartAmount());
@@ -17,7 +19,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-container">
-        <div className="header-title">
+        <div className="header-title" onClick={() => navigate("/")}>
           <h1>Minku</h1>
         </div>
         <div className="header-searchbar">
