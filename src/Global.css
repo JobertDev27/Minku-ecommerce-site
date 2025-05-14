@@ -577,7 +577,7 @@ footer {
 }
 
 .item-main-detail {
-  height: 100%;
+  height: max(100%, fit-content);
   border-right: 2px black solid;
   padding: 50px;
   display: flex;
