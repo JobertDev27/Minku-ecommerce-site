@@ -54,7 +54,6 @@ export default function Home() {
               <button className="button" onClick={() => navigate("/Store")}>
                 Shop Now
               </button>
-              <button className="sec-button">Learn More</button>
             </div>
           </div>
         </section>

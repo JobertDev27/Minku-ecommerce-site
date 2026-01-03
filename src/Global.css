@@ -54,13 +54,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .button:hover,
 .sec-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 400ms;
 }
 
 .button:active,
 .sec-button:active {
-  transform: scale(0.6);
+  transform: scale(0.9);
   transition: transform 400ms;
 }
 

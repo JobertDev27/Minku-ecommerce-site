@@ -1,4 +1,5 @@
 import { Product, Review } from "./components/types";
+import { handleAddToCart } from "./components/cartData";
 import { useEffect } from "react";
 
 type Props = {
@@ -49,7 +50,15 @@ export default function ItemPage({ item, setProduct }: Props) {
           <p className="item-page-price">{"$" + item.price}</p>
         </div>
         <p className="item-page-desc">{item.description}</p>
-        <button className="button item-page-button">Add to cart</button>
+        <button
+          className="button item-page-button"
+          onClick={() => {
+            handleAddToCart(item);
+            alert("Item successfully added to cart!");
+          }}
+        >
+          Add to cart
+        </button>
       </div>
       <div className="item-sec-detail">
         <button className="exit-item-button" onClick={() => setProduct(null)}>
