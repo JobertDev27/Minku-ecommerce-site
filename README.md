@@ -1,6 +1,6 @@
 # # Minku – E-commerce Store
 
-[Live Preview](https://minku-ecommerce-site.vercel.app/)
+[Live Preview](https://minku-shop.vercel.app/)
 
 Minku is a fully responsive e-commerce site where users can browse, search, and purchase products online. It’s built with React and TypeScript, styled using CSS, and bundled with Vite for fast performance across all devices. Product data comes from the DummyJSON API, and cart items are stored locally using localStorage. The site is deployed via Vercel.
 
